@@ -16,7 +16,7 @@
           try {
             var resolved = new URL(url, location.href);
             if (resolved.pathname.endsWith('/sw.js') || resolved.origin !== location.origin) {
-              url = new URL('/sw.js', location.origin).href;
+              url = new URL('./sw.js', location.href).href;
             }
           } catch (_) {}
           return register(url, options);
