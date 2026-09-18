@@ -9,7 +9,7 @@
       try {
         const url = new URL(scriptURL, location.href);
         if (url.pathname.endsWith('/sw.js') || url.origin !== location.origin) {
-          return originalRegister(new URL('/sw.js', location.origin).href, options);
+          return originalRegister(new URL('./sw.js', location.href).href, options);
         }
       } catch (_) {}
       return originalRegister(scriptURL, options);
