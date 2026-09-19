@@ -2,32 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#6d28d9">
-  <title>Wilberthub</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10051c">
+  <title>Wilbert Hub</title>
+  <style>html,body{margin:0;width:100%;height:100%;background:#08030f;color:#fff}body{font-family:"Trebuchet MS",system-ui,sans-serif}</style>
 </head>
-<body>
-  <script>
-    (function () {
-      var sw = navigator.serviceWorker;
-      if (sw && sw.register) {
-        var register = sw.register.bind(sw);
-        sw.register = function (url, options) {
-          try {
-            var resolved = new URL(url, location.href);
-            if (resolved.pathname.endsWith('/sw.js') || resolved.origin !== location.origin) {
-              url = new URL('./sw.js', location.href).href;
-            }
-          } catch (_) {}
-          return register(url, options);
-        };
-      }
-      window.assetsBase = 'https://cdn.jsdelivr.net/gh/TongSherbet/storage/';
-      var script = document.createElement('script');
-      script.src = './stuff/loader.js';
-      script.async = false;
-      document.head.appendChild(script);
-    })();
-  </script>
-</body>
+<body><script src="./stuff/loader.js"></script></body>
 </html>
